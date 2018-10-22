@@ -5,21 +5,18 @@
 
 import math
 
-#help(math)
+A = int(input("Введите число №1"))
+B = int(input("Введите число №2"))
+C = int(input("Введите число №3"))
 
-A = 9 #  int(input("Введите число №1"))
-B = 5 #  input("Введите число №2")
-C = 6 #  input("Введите число №3")
-
-cos_a = (A**2 - B**2 - C**2) / (- 2 * B * C)
-cos_b = (B**2 - A**2 - C**2) / (- 2 * A * C)
-cos_c = (C**2 - A**2 - B**2) / (- 2 * A * B)
-
-a = math.degrees(math.acos(cos_a))
-b = math.degrees(math.acos(cos_b))
-c = math.degrees(math.acos(cos_c))
 
 if A + B > C and B + C > A and A + C > B:
+    cos_a = (A ** 2 - B ** 2 - C ** 2) / (- 2 * B * C)
+    cos_b = (B ** 2 - A ** 2 - C ** 2) / (- 2 * A * C)
+    cos_c = (C ** 2 - A ** 2 - B ** 2) / (- 2 * A * B)
+    a = math.degrees(math.acos(cos_a))
+    b = math.degrees(math.acos(cos_b))
+    c = math.degrees(math.acos(cos_c))
     print("Треугольник существует")
     print('Его углы равны:')
     print('a = %f' % round(a))
