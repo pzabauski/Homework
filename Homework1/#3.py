@@ -18,5 +18,3 @@ for i in range(1, len(seq)):
             seq[j] = 0
 
 print(seq)
-
-
