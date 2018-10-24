@@ -47,7 +47,7 @@ if x in week_days:
     z = dates[number_of_days.index(min(number_of_days))]
     z1 = int(z.month)
     z2 = int(z.year)
-    print('Ближайший месяц: %d' %z1)
+    print('Ближайший месяц: %d' % z1)
     print('Ближайший год: %d' % z2)
 
 else:

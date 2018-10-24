@@ -9,64 +9,65 @@ import string
 
 
 # 1 Задание 1
-# with open('Text.txt') as file:
-#    for line in file:
-#        print(line.split())
-#
+print('Задание 1.1')
+with open('Text.txt') as file:
+    for line in file:
+        print(line.split())
+
 
 # 2 Задание 2
-#with open('Text.txt', 'r+') as file:
-#    words = 0
-#    for line in file:
-#        words_in_line = len(line.split())
-#        print('words_in_line = %d' % words_in_line)
-#        words += words_in_line
-#        print('words = %d' % words)
-#print(words)
+print('Задание 1.2')
+with open('Text.txt', 'r+') as file:
+    words = 0
+    for line in file:
+        words_in_line = len(line.split())
+        words += words_in_line
+print('В тексте %d слов' % words)
 
 # 3 Задание 3
+print('Задание 1.3')
 # Создаем лист уникальных символов из текста
 
-#with open('Text.txt') as file:
-#    words = 0
-#    characters_in_text = []
-#   for line in file:
-#        list_of_words = line.split()
-#        for word in range(0, len(list_of_words)):
-#            words_in_line = list_of_words[word]
-#            for character in range(0, len(words_in_line)):
-#                if words_in_line[character] not in characters_in_text:
-#                    characters_in_text.append(words_in_line[character])
-#                else:
-#                    continue
+with open('Text.txt') as file:
+    words = 0
+    characters_in_text = []
+    for line in file:
+        list_of_words = line.split()
+        for word in range(0, len(list_of_words)):
+            words_in_line = list_of_words[word]
+            for character in range(0, len(words_in_line)):
+                if words_in_line[character] not in characters_in_text:
+                    characters_in_text.append(words_in_line[character])
+                else:
+                    continue
 
-#print(characters_in_text)
+print(characters_in_text)
 
 # Создаем список из слов в тексте (разделитель - пробел)
 
-#list_of_words = []
+list_of_words = []
 
-#with open('Text.txt') as file:
-#    for line in file:
-#        line_split_1 = line.split()
-#        for word in range(0, len(line_split_1)):
-#            list_of_words.append(line_split_1[word])
-#
-#print(list_of_words)
+with open('Text.txt') as file:
+    for line in file:
+        line_split_1 = line.split()
+        for word in range(0, len(line_split_1)):
+            list_of_words.append(line_split_1[word])
+
+print(list_of_words)
 
 # Создаем словарь содержащий уникальный символы из текста и
 # присваиваем каждому из них значение '0'
-#d = dict.fromkeys(characters_in_text)
-#for i in d:
-#    d[i] = 0
+d = dict.fromkeys(characters_in_text)
+for i in d:
+    d[i] = 0
 
 # Заполняем словарь частотой с которой слова встречаются в тексте.
-#for i in range(0, len(list_of_words)):
-#    for j in range(0, len(characters_in_text)):
-#        p = list_of_words[i].count(characters_in_text[j])
-#        d[characters_in_text[j]] = d[characters_in_text[j]] + p
+for i in range(0, len(list_of_words)):
+    for j in range(0, len(characters_in_text)):
+        p = list_of_words[i].count(characters_in_text[j])
+        d[characters_in_text[j]] = d[characters_in_text[j]] + p
 
-#print(d)
+print(d)
 
 
 # 4 Задание 4
