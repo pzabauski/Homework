@@ -16,6 +16,11 @@ if len(a) == 10 and a[2] == "." and a[5] == '.':
     day = int(a[0:2])
     d = calendar.weekday(year, month, day)
 
+    # Это работает не так. Должно быть:
+    # text_calendar = calendar.TextCalendar()
+    # print(text_calendar.formatweekday(d, 9))
+    # А можно было вместо использования классов просто использовать calendar.day_name:
+    # print(calendar.day_name[d])
     self = calendar.TextCalendar.formatweekday
     print(calendar.TextCalendar.formatweekday(self, d, 9))  # Что здесь значит self, почему без него не работает?
 else:

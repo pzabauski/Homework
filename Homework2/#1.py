@@ -12,12 +12,15 @@ import string
 print('Задание 1.1')
 with open('Text.txt') as file:
     for line in file:
-        print(line.split())
+        print(line.split())  # а зачем тут split? почему не просто print(line)?
 
 
 # 2 Задание 2
 print('Задание 1.2')
 with open('Text.txt', 'r+') as file:
+    # можно было не считывать построчно, а считать файл целиком и один раз вызвать split:
+    # text = f.read()
+    # words = len(text.split())
     words = 0
     for line in file:
         words_in_line = len(line.split())
