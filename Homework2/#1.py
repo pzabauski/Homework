@@ -12,7 +12,7 @@ import string
 print('Задание 1.1')
 with open('Text.txt') as file:
     for line in file:
-        print(line.split())  # а зачем тут split? почему не просто print(line)?
+        print(line.split())  # а зачем тут split? почему не просто print(line)? \ ok
 
 
 # 2 Задание 2
@@ -25,6 +25,13 @@ with open('Text.txt', 'r+') as file:
     for line in file:
         words_in_line = len(line.split())
         words += words_in_line
+print('В тексте %d слов' % words)
+
+# 2 Задание 2 v.2
+print('Задание 1.2 v.2')
+with open('Text.txt', 'r+') as file:
+    text = file.read()
+    words = len(text.split())
 print('В тексте %d слов' % words)
 
 # 3 Задание 3

@@ -7,7 +7,7 @@
 import calendar
 import datetime
 
-# Часть 1
+# Часть 1 v.1
 a = input('Введите дату в формате DD.MM.YYYY\n')
 
 if len(a) == 10 and a[2] == "." and a[5] == '.':
@@ -26,6 +26,32 @@ if len(a) == 10 and a[2] == "." and a[5] == '.':
 else:
     print('Дата введена в неверном формате ')
 
+# Часть 1 v.2
+print('Часть 1 v.2')
+a = input('Введите дату в формате DD.MM.YYYY\n')
+
+if len(a) == 10 and a[2] == "." and a[5] == '.':
+    year = int(a[6:len(a)])
+    month = int(a[3:5])
+    day = int(a[0:2])
+    d = calendar.weekday(year, month, day)
+    print(calendar.day_name[d])
+else:
+    print('Дата введена в неверном формате ')
+
+# Часть 1 v.3
+print('Часть 1 v.3')
+a = input('Введите дату в формате DD.MM.YYYY\n')
+
+if len(a) == 10 and a[2] == "." and a[5] == '.':
+    year = int(a[6:len(a)])
+    month = int(a[3:5])
+    day = int(a[0:2])
+    d = calendar.weekday(year, month, day)
+    text_calendar = calendar.TextCalendar()
+    print(text_calendar.formatweekday(d, 9))
+else:
+    print('Дата введена в неверном формате ')
 
 # Часть 2
 x = input('Введите день недели:\n')
