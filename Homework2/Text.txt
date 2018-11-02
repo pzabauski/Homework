@@ -1,1 +1,1 @@
-['012AA', 'AAAAA']['BBBBB.', 'BBBBB']['CCCCC,', 'CCCCC']
+d e c a b 

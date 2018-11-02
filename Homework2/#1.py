@@ -81,3 +81,23 @@ print(d)
 
 
 # 4 Задание 4
+
+with open('Text.txt', 'r+') as file:
+    text = file.read()
+    text_in_list = text.split() # выводит каждую строку в тексте в элемент словаря
+    if len(text_in_list) % 2 == 0:
+        median = int(len(text_in_list) / 2)
+        temp1 = text_in_list[median:]
+        temp2 = text_in_list[:median]
+        new_text_in_list = temp1 + temp2
+    else:
+        median = int(len(text_in_list) / 2 + 1)
+        temp1 = text_in_list[median:]
+        temp2 = text_in_list[:median-1]
+        new_text_in_list = temp1 + temp2
+        new_text_in_list.insert(median-1, text_in_list[median-1])
+
+
+with open('Text.txt', 'w') as file1:
+    for i in range(0, len(new_text_in_list)):
+        file1.write('%s ' % new_text_in_list[i])
